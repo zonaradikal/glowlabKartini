@@ -1538,6 +1538,7 @@ export default function SimulationPage() {
                 isWin,
                 phaseScores: result.phaseScores,
                 phases: result.phases,
+                fromRole: location.state?.fromRole,
             }
         })
     }, [getFinalScore, reactorData, nickname, isScrammed, isWin, isTimeOut, navigate])

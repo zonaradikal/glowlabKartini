@@ -195,7 +195,10 @@ export default function SkorPage() {
         isWin = false,
         phaseScores = [],
         phases = [],
+        fromRole = 'pemula',
     } = sessionData
+
+    const isAhli = fromRole === 'ahli'
 
     const getGrade = (s) => {
         // Skor baru maks 3000 poin
@@ -517,7 +520,14 @@ export default function SkorPage() {
                     {/* ACTION BUTTONS */}
                     <div style={sk.actions}>
                         <button
-                            onClick={() => { completeStep('step3'); navigate('/prepare') }}
+                            onClick={() => {
+                                if (isAhli) {
+                                    navigate('/')
+                                } else {
+                                    completeStep('step3')
+                                    navigate('/prepare')
+                                }
+                            }}
                             style={sk.btnSecondary}
                             onMouseEnter={e => {
                                 e.currentTarget.style.background = 'rgba(255,255,255,0.98)'
@@ -528,7 +538,7 @@ export default function SkorPage() {
                                 e.currentTarget.style.transform = 'translateY(0)'
                             }}
                         >
-                            ← {t('skorPanduan')}
+                            {isAhli ? `← Kembali` : `← ${t('skorPanduan')}`}
                         </button>
 
                         <button
