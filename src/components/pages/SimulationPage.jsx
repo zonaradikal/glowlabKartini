@@ -11,6 +11,7 @@ import { useReactorAPI } from '../../hooks/useReactorAPI'
 import { useScoringSystem } from '../../hooks/useScoringSystem'
 import ErrorBoundary from '../ui/ErrorBoundary'
 import { useLanguage } from '../../context/LanguageContext'
+import { saveScore } from '../../services/api'
 //import icon
 import profilIcon from '../../assets/icon/profil.svg';
 
@@ -1510,15 +1511,11 @@ export default function SimulationPage() {
 
         // Kirim ke database
         try {
-            await fetch('/api/scores/save', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    username: nickname,
-                    score: result.finalScore,
-                    completion_time: result.timeElapsed,
-                    scram_count: result.penaltyLog.length,
-                })
+            await saveScore({
+                nickname,
+                score: result.finalScore,
+                completionTime: result.timeElapsed,
+                scramCount: result.penaltyLog.length,
             })
         } catch (err) {
             console.warn('[SCORE] Gagal simpan ke DB:', err.message)

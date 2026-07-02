@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useLanguage } from '../../context/LanguageContext'
 import { useProgress } from '../../context/ProgressContext'
-import { saveScore } from '../../services/api'
+import { getLeaderboard } from '../../services/api'
 import AtomBackground from '../three/AtomBackground'
 //icon
 import finishIcon from '../../assets/icon/flags.svg'
@@ -218,19 +218,12 @@ export default function SkorPage() {
         return `${m}:${String(s).padStart(2, '0')}`
     }
 
-    useEffect(() => {
-        if (!sessionData.score) return
-        saveScore({ nickname, score })
-    }, [])
-
     const [leaderboard, setLeaderboard] = useState([])
 
     useEffect(() => {
-        // ✅ Ubah limit dari 10 ke 50
-        fetch('/api/scores/leaderboard?limit=50')
-            .then(r => r.json())
-            .then(data => { if (Array.isArray(data)) setLeaderboard(data) })
-            .catch(() => { })
+        getLeaderboard().then(data => {
+            if (Array.isArray(data)) setLeaderboard(data)
+        })
     }, [])
 
     const getStatusLabel = () => {
