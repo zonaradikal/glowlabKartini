@@ -528,6 +528,56 @@ function RulesModal({ nickname, phases, onConfirm }) {
             ),
         },
         {
+            color: '#0088aa',
+            title: t('rulesCameraTitle'),
+            body: t('rulesCameraBody'),
+            extra: (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 8 }}>
+                    {[
+                        { icon: '🖱️', keys: isId ? 'Scroll' : 'Scroll Wheel', desc: isId ? 'Zoom in / Zoom out' : 'Zoom in / Zoom out' },
+                        { icon: '🖱️', keys: isId ? 'Klik Kiri + Tahan' : 'Left Click + Hold', desc: isId ? 'Putar kamera (orbit)' : 'Rotate camera (orbit)' },
+                        { icon: '🖱️', keys: isId ? 'Klik Kanan + Tahan' : 'Right Click + Hold', desc: isId ? 'Geser kamera (pan)' : 'Pan camera' },
+                    ].map((r, i) => (
+                        <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                            <kbd style={{
+                                fontFamily: "'Poppins',sans-serif", fontSize: 9, fontWeight: 700,
+                                padding: '3px 8px', border: '1px solid #0088aa88',
+                                borderRadius: 4, color: '#0088aa', background: '#0088aa10',
+                                whiteSpace: 'nowrap', minWidth: 130, textAlign: 'center',
+                            }}>
+                                {r.icon} {r.keys}
+                            </kbd>
+                            <span style={{ fontSize: 11, color: '#25292d' }}>{r.desc}</span>
+                        </div>
+                    ))}
+                </div>
+            ),
+        },
+        {
+            color: '#7733cc',
+            title: t('rulesComponentTitle'),
+            body: t('rulesComponentBody'),
+            extra: (
+                <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8, flexWrap: 'wrap' }}>
+                    {['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'].map((letter, i) => (
+                        <div key={i} style={{
+                            width: 26, height: 26, borderRadius: '50%',
+                            background: 'rgba(60,70,80,0.88)',
+                            border: '2px solid #7733cc',
+                            display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        }}>
+                            <span style={{
+                                fontFamily: "'Orbitron',monospace", fontSize: 9,
+                                fontWeight: 700, color: '#7733cc',
+                            }}>
+                                {letter}
+                            </span>
+                        </div>
+                    ))}
+                </div>
+            ),
+        },
+        {
             color: '#cc2200',
             title: t('rulesScramTitle'),
             body: t('rulesScramBody'),

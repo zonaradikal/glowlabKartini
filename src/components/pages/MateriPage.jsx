@@ -28,7 +28,7 @@ const getMateriData = (t) => [
         title: t('materi1Title'),
         content: t('materi1Content'),
         tag: 'OVERVIEW',
-        image: '/images/brin.png',
+        image: '/images/kartiniView.svg',
     },
     {
         id: 2,
@@ -38,7 +38,7 @@ const getMateriData = (t) => [
         title: t('materi2Title'),
         content: t('materi2Content'),
         tag: 'SEJARAH',
-        image: '/images/brin.png',
+        image: '/images/kartiniView.svg',
     },
     {
         id: 3,

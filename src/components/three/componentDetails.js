@@ -95,7 +95,7 @@ export const COMPONENT_DETAILS = {
   rod_safety: {
     id: {
       detail:
-        "Safety Rod adalah batang kendali utama yang wajib berada di posisi 100% (tercabut penuh) agar reaktor bisa beroperasi. Batang ini dirancang untuk SCRAM — penjatuhan darurat ke posisi 0% dalam hitungan detik — saat kondisi abnormal terdeteksi, menjadikannya garis pertahanan keselamatan pertama reaktor.",
+        "Safety Rod adalah batang kendali utama yang wajib berada di posisi 100% (tercabut penuh) agar reaktor bisa beroperasi. Batang ini dirancang untuk SCRAM, penjatuhan darurat ke posisi 0% dalam hitungan detik saat kondisi abnormal terdeteksi, menjadikannya garis pertahanan keselamatan pertama reaktor.",
       specs: [
         { label: "Material absorber", value: "Boron Carbide (B₄C)" },
         { label: "Mode operasi", value: "Naik/turun manual + SCRAM otomatis" },
@@ -104,7 +104,7 @@ export const COMPONENT_DETAILS = {
     },
     en: {
       detail:
-        "The Safety Rod is the primary control rod that must be at 100% (fully withdrawn) for the reactor to operate. It is designed to SCRAM — emergency insertion to 0% within seconds — when abnormal conditions are detected, making it the reactor's first line of safety defense.",
+        "The Safety Rod is the primary control rod that must be at 100% (fully withdrawn) for the reactor to operate. It is designed to SCRAM, emergency insertion to 0% within seconds when abnormal conditions are detected, making it the reactor's first line of safety defense.",
       specs: [
         { label: "Absorber material", value: "Boron Carbide (B₄C)" },
         { label: "Operation mode", value: "Manual up/down + auto SCRAM" },
@@ -116,7 +116,7 @@ export const COMPONENT_DETAILS = {
   rod_shim: {
     id: {
       detail:
-        "Shim Rod digunakan untuk kontrol reaktivitas kasar — biasanya untuk mengkompensasi perubahan reaktivitas besar seperti penambahan/pengurangan bahan bakar atau penyesuaian daya dalam rentang besar. Pergerakannya lebih signifikan dibanding Regulating Rod, sehingga dipakai di awal proses menaikkan daya.",
+        "Shim Rod digunakan untuk kontrol reaktivitas kasar, biasanya untuk mengkompensasi perubahan reaktivitas besar seperti penambahan/pengurangan bahan bakar atau penyesuaian daya dalam rentang besar. Pergerakannya lebih signifikan dibanding Regulating Rod, sehingga dipakai di awal proses menaikkan daya.",
       specs: [
         { label: "Material absorber", value: "Boron Carbide (B₄C)" },
         { label: "Fungsi", value: "Kontrol reaktivitas kasar" },
@@ -128,7 +128,7 @@ export const COMPONENT_DETAILS = {
     },
     en: {
       detail:
-        "The Shim Rod is used for coarse reactivity control — typically to compensate for large reactivity changes such as fuel adjustments or major power changes. Its movement has a more significant effect than the Regulating Rod, so it is used early in the power-raising process.",
+        "The Shim Rod is used for coarse reactivity control, typically to compensate for large reactivity changes such as fuel adjustments or major power changes. Its movement has a more significant effect than the Regulating Rod, so it is used early in the power-raising process.",
       specs: [
         { label: "Absorber material", value: "Boron Carbide (B₄C)" },
         { label: "Function", value: "Coarse reactivity control" },
@@ -143,7 +143,7 @@ export const COMPONENT_DETAILS = {
   rod_regulating: {
     id: {
       detail:
-        "Regulating Rod digunakan untuk fine-tuning daya reaktor secara presisi. Setelah Safety dan Shim Rod mengatur kondisi mendekati target, Regulating Rod menyesuaikan daya secara halus untuk menjaga reaktor stabil pada level yang diinginkan — inilah batang yang paling sering disesuaikan selama operasi normal.",
+        "Regulating Rod digunakan untuk fine-tuning daya reaktor secara presisi. Setelah Safety dan Shim Rod mengatur kondisi mendekati target, Regulating Rod menyesuaikan daya secara halus untuk menjaga reaktor stabil pada level yang diinginkan. Inilah batang yang paling sering disesuaikan selama operasi normal.",
       specs: [
         { label: "Material absorber", value: "Boron Carbide (B₄C)" },
         { label: "Fungsi", value: "Fine-tuning daya" },
@@ -155,7 +155,7 @@ export const COMPONENT_DETAILS = {
     },
     en: {
       detail:
-        "The Regulating Rod provides precise fine-tuning of reactor power. After the Safety and Shim Rods bring conditions close to target, the Regulating Rod makes fine adjustments to keep the reactor stable at the desired level — this is the rod most frequently adjusted during normal operation.",
+        "The Regulating Rod provides precise fine-tuning of reactor power. After the Safety and Shim Rods bring conditions close to target, the Regulating Rod makes fine adjustments to keep the reactor stable at the desired level. This is the rod most frequently adjusted during normal operation.",
       specs: [
         { label: "Absorber material", value: "Boron Carbide (B₄C)" },
         { label: "Function", value: "Power fine-tuning" },
@@ -170,7 +170,7 @@ export const COMPONENT_DETAILS = {
   pc_operator: {
     id: {
       detail:
-        "PC Operator adalah terminal komputer yang digunakan operator untuk memantau parameter reaktor secara digital — termasuk daya, suhu, fluks neutron, dan posisi batang kendali — serta mencatat log operasi sesuai prosedur keselamatan yang diwajibkan regulator.",
+        "PC Operator adalah terminal komputer yang digunakan operator untuk memantau parameter reaktor secara digital, termasuk daya, suhu, fluks neutron, dan posisi batang kendali serta mencatat log operasi sesuai prosedur keselamatan yang diwajibkan regulator.",
       specs: [
         { label: "Fungsi", value: "Monitoring & pencatatan data operasi" },
         { label: "Lokasi", value: "Ruang kendali operator" },
@@ -178,7 +178,7 @@ export const COMPONENT_DETAILS = {
     },
     en: {
       detail:
-        "The Operator PC is the computer terminal used by operators to digitally monitor reactor parameters — including power, temperature, neutron flux, and control rod positions — and to log operations in accordance with regulator-mandated safety procedures.",
+        "The Operator PC is the computer terminal used by operators to digitally monitor reactor parameters,  including power, temperature, neutron flux, and control rod positions and to log operations in accordance with regulator-mandated safety procedures.",
       specs: [
         { label: "Function", value: "Operation monitoring & data logging" },
         { label: "Location", value: "Operator control room" },
