@@ -558,19 +558,23 @@ function RulesModal({ nickname, phases, onConfirm }) {
             title: t('rulesComponentTitle'),
             body: t('rulesComponentBody'),
             extra: (
-                <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8, flexWrap: 'wrap' }}>
-                    {['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'].map((letter, i) => (
-                        <div key={i} style={{
-                            width: 26, height: 26, borderRadius: '50%',
-                            background: 'rgba(60,70,80,0.88)',
-                            border: '2px solid #7733cc',
-                            display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        }}>
+                <div style={{
+                    display: 'grid', gridTemplateColumns: '1fr 1fr',
+                    gap: '5px 16px', marginTop: 8,
+                }}>
+                    {t('rulesComponentList').map((item, i) => (
+                        <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 7 }}>
                             <span style={{
-                                fontFamily: "'Orbitron',monospace", fontSize: 9,
-                                fontWeight: 700, color: '#7733cc',
+                                fontFamily: "'Orbitron',monospace", fontSize: 11,
+                                fontWeight: 900, color: '#7733cc', minWidth: 14, lineHeight: 1,
                             }}>
-                                {letter}
+                                {item.icon}
+                            </span>
+                            <span style={{
+                                fontFamily: "'Poppins',sans-serif", fontSize: 10,
+                                color: '#25292d', lineHeight: 1.3,
+                            }}>
+                                {item.name}
                             </span>
                         </div>
                     ))}
