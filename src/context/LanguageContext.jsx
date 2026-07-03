@@ -245,6 +245,9 @@ const translations = {
         btnRestart: 'MULAI LAGI',
         powerWarnTitle: 'PERINGATAN!',
         btnUnderstood: 'MENGERTI',
+        rodOrderWarnTitle: 'URUTAN BATANG KENDALI SALAH!',
+        rodOrderWarnMsg: 'Naikkan Safety Rod terlebih dahulu sebelum mengoperasikan Shim atau Regulating Rod. Urutan yang benar: Safety → Shim → Regulating.',
+        rodOrderWarnBtn: 'MENGERTI',
         reactorActiveLabel: 'REAKTOR AKTIF',
         // ── Win Overlay ──
         winTitle: 'SEMUA FASE SELESAI!',
@@ -523,6 +526,9 @@ const translations = {
         btnRestart: 'RESTART',
         powerWarnTitle: 'WARNING!',
         btnUnderstood: 'Get It',
+        rodOrderWarnTitle: 'WRONG ROD ORDER!',
+        rodOrderWarnMsg: 'Raise the Safety Rod first before operating the Shim or Regulating Rod. Correct order: Safety → Shim → Regulating.',
+        rodOrderWarnBtn: 'UNDERSTOOD',
         reactorActiveLabel: 'REACTOR ACTIVE',
         // ── Win Overlay ──
         winTitle: 'ALL PHASES COMPLETE!',

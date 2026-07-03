@@ -154,7 +154,7 @@ const mockCalculatePower = (rodPositions) => {
         neutron_flux: parseFloat((power * 1e12).toExponential(2)),
         temperature: parseFloat((25 + power * 0.5).toFixed(1)),
         rod_positions: rodPositions,
-        scram_triggered, // ← BARU
+        scram_triggered,
     };
 };
 

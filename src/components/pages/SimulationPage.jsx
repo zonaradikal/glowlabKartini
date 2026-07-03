@@ -1406,6 +1406,28 @@ export default function SimulationPage() {
         moveRod, startHold, stopHold, scram, scramRod,
         resetScram, resetScramRod } = useControlRods()
 
+    const [showRodOrderWarning, setShowRodOrderWarning] = useState(false)
+
+    const handleMoveRod = useCallback((rodType, direction) => {
+        if (isReactorActive && direction === 'up' &&
+            (rodType === 'shim' || rodType === 'regulating') &&
+            rodPositions.safety === 0) {
+            setShowRodOrderWarning(true)
+            return
+        }
+        moveRod(rodType, direction)
+    }, [isReactorActive, rodPositions.safety, moveRod])
+
+    const handleStartHold = useCallback((rodType, direction) => {
+        if (isReactorActive && direction === 'up' &&
+            (rodType === 'shim' || rodType === 'regulating') &&
+            rodPositions.safety === 0) {
+            setShowRodOrderWarning(true)
+            return
+        }
+        startHold(rodType, direction)
+    }, [isReactorActive, rodPositions.safety, startHold])
+
     const handleAutoScram = useCallback((reason) => {
         console.warn('[AUTO-SCRAM TRIGGERED]', reason)
         scram()
@@ -1415,7 +1437,7 @@ export default function SimulationPage() {
 
     const { shiftPressed, lastAction, activeKeys } =
         useKeyboardControl(
-            moveRod,
+            handleMoveRod,
             isScrammed,
             scramRod,
             scrammedRods,
@@ -1648,7 +1670,7 @@ export default function SimulationPage() {
                     apiStatus={apiStatus}
                     onlyControl={true}
                     movingRods={movingRods}
-                    onStartHold={startHold}
+                    onStartHold={handleStartHold}
                     onStopHold={stopHold}
                     onScramRod={scramRod}
                     onResetScramRod={resetScramRod}
@@ -1720,6 +1742,91 @@ export default function SimulationPage() {
                             }}
                         >
                             {t('btnUnderstood')}
+                        </button>
+                    </div>
+                </div>
+            )}
+
+            {/* Rod order warning modal */}
+            {showRodOrderWarning && (
+                <div
+                    style={{
+                        position: 'fixed', inset: 0,
+                        background: 'rgba(0,20,50,0.55)',
+                        backdropFilter: 'blur(4px)',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        zIndex: 9999,
+                    }}
+                    onClick={() => setShowRodOrderWarning(false)}
+                >
+                    <div
+                        style={{
+                            position: 'relative',
+                            background: '#fff',
+                            borderRadius: 14,
+                            padding: '28px 28px',
+                            width: 320,
+                            boxShadow: '0 20px 60px rgba(0,80,160,0.3)',
+                            border: '1px solid #f0c040',
+                            display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14,
+                        }}
+                        onClick={e => e.stopPropagation()}
+                    >
+                        <div style={{
+                            position: 'absolute', top: 0, left: 0, right: 0, height: 3,
+                            background: 'linear-gradient(90deg, #cc8800, #ffcc00)',
+                            borderRadius: '12px 12px 0 0',
+                        }} />
+                        <div style={{ fontSize: 32, marginTop: 8 }}>⚠️</div>
+                        <div style={{
+                            fontFamily: "'Poppins',sans-serif",
+                            fontSize: 13, fontWeight: 700,
+                            color: '#aa6600', letterSpacing: 0, textAlign: 'center',
+                        }}>
+                            {t('rodOrderWarnTitle')}
+                        </div>
+                        <div style={{
+                            fontFamily: "'Poppins',sans-serif",
+                            fontSize: 11, color: '#445566',
+                            textAlign: 'center', lineHeight: 1.8,
+                            letterSpacing: 0, padding: '0 8px',
+                        }}>
+                            {t('rodOrderWarnMsg')}
+                        </div>
+                        <div style={{
+                            display: 'flex', alignItems: 'center', gap: 8,
+                            background: '#fff8e8', border: '1px solid #e8c840',
+                            borderRadius: 8, padding: '8px 14px', width: '100%',
+                            justifyContent: 'center',
+                        }}>
+                            {[
+                                { label: t('rodSafety'), color: '#cc2200' },
+                                { label: '→', color: '#aaaaaa' },
+                                { label: t('rodShim'), color: '#886600' },
+                                { label: '→', color: '#aaaaaa' },
+                                { label: t('rodReg'), color: '#006633' },
+                            ].map((item, i) => (
+                                <span key={i} style={{
+                                    fontFamily: "'Orbitron',monospace",
+                                    fontSize: 11, fontWeight: 700,
+                                    color: item.color,
+                                }}>
+                                    {item.label}
+                                </span>
+                            ))}
+                        </div>
+                        <button
+                            onClick={() => setShowRodOrderWarning(false)}
+                            style={{
+                                width: '100%', padding: '10px 0',
+                                fontFamily: "'Poppins',sans-serif",
+                                fontSize: 11, fontWeight: 700, letterSpacing: 0,
+                                border: 'none', borderRadius: 6, cursor: 'pointer',
+                                background: 'linear-gradient(135deg, #cc8800, #ffaa00)',
+                                color: '#fff',
+                            }}
+                        >
+                            {t('rodOrderWarnBtn')}
                         </button>
                     </div>
                 </div>
