@@ -1373,7 +1373,7 @@ function WinOverlay({ isWin, isTimeOut, score, stableSeconds, onFinish }) {
                 {/* Subjudul */}
                 <div style={{
                     fontFamily: "'Poppins',sans-serif",
-                    fontSize: 9,
+                    fontSize: 10,
                     color: '#7799bb',
                     letterSpacing: 0,
                 }}>
@@ -1420,7 +1420,7 @@ function WinOverlay({ isWin, isTimeOut, score, stableSeconds, onFinish }) {
                 {/* Hint */}
                 <div style={{
                     fontFamily: "'Poppins',sans-serif",
-                    fontSize: 8,
+                    fontSize: 10,
                     color: '#aabbcc',
                     letterSpacing: 0,
                 }}>
