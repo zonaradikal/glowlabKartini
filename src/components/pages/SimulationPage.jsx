@@ -559,7 +559,7 @@ function RulesModal({ nickname, phases, onConfirm }) {
             body: t('rulesComponentBody'),
             extra: (
                 <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8, flexWrap: 'wrap' }}>
-                    {['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'].map((letter, i) => (
+                    {['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'].map((letter, i) => (
                         <div key={i} style={{
                             width: 26, height: 26, borderRadius: '50%',
                             background: 'rgba(60,70,80,0.88)',

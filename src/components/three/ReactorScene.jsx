@@ -56,11 +56,11 @@ const LABEL_DATA = [
         forceRight: true,
     },
     {
-        id: 'vessel',
-        labelEN: 'Reactor Vessel',
-        labelID: '(Bejana Reaktor)',
-        anchor3D: new THREE.Vector3(D_VESSEL_R + 0.3, D_VESSEL_Y, 0),
-        color: '#ffcc00',
+        id: 'water',
+        labelEN: 'Pool Water',
+        labelID: '(Air Kolam)',
+        anchor3D: new THREE.Vector3(D_POOL_R * 0.55, +1.0, 0),
+        color: '#2299ee',
         icon: 'E',
         forceRight: true,
     },
@@ -70,15 +70,6 @@ const LABEL_DATA = [
         labelID: '(Kolam Reaktor)',
         anchor3D: new THREE.Vector3(D_POOL_R + D_POOL_WALL + 0.2, 1.5, 0),
         color: '#ff00e1',
-        icon: 'G',
-        forceRight: true,
-    },
-    {
-        id: 'water',
-        labelEN: 'Pool Water',
-        labelID: '(Air Kolam)',
-        anchor3D: new THREE.Vector3(D_POOL_R * 0.55, +1.0, 0),
-        color: '#2299ee',
         icon: 'F',
         forceRight: true,
     },
@@ -131,7 +122,7 @@ const LABEL_DATA = [
         labelID: '(PC Operator)',
         anchor3D: new THREE.Vector3(DESK_X, DECK_Y_VAL + 1.2, DESK_Z),
         color: '#00ccff',
-        icon: 'H',
+        icon: 'G',
         forceRight: false, // akan muncul di kiri layar
     },
     // PANEL KONTROL RUANG OPERATOR — label baru
@@ -141,7 +132,7 @@ const LABEL_DATA = [
         labelID: '(Panel Kontrol)',
         anchor3D: new THREE.Vector3(PANEL_X, DECK_Y_VAL + 2.1, PANEL_Z + 2.2),
         color: '#ffaa00',
-        icon: 'I',
+        icon: 'H',
         forceRight: false, // akan muncul di kiri layar
     },
 ]
