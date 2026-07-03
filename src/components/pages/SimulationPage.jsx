@@ -664,12 +664,11 @@ function HeaderBar({ onHome, reactorData, isScrammed,
     }, [])
 
     const powerKw = isScrammed ? 0 : (reactorData?.power_kw || 0)
-    const rawSt = isScrammed ? 'SCRAM' : (reactorData?.status || 'SHUTDOWN')
+    const rawSt = isScrammed ? 'SCRAM' : (powerKw >= 1 ? 'OPERATING' : 'SHUTDOWN')
     const label = status?.[rawSt] || rawSt
 
     const statusCfg = {
         OPERATING: { color: '#007744', bg: '#e8f8ee', border: '#00aa55', icon: '⚡' },
-        SUBCRITICAL: { color: '#885500', bg: '#fff8e8', border: '#cc8800', icon: '◑' },
         SHUTDOWN: { color: '#335577', bg: '#e8f0f8', border: '#6699bb', icon: '○' },
         SCRAM: { color: '#cc2200', bg: '#ffeee8', border: '#ee4422', icon: '🔴' },
     }
