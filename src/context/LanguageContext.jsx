@@ -156,7 +156,6 @@ const translations = {
         guideTitle: 'PANDUAN KEYBOARD',
         noteTitle: '⚠ CATATAN OPERASI',
         notes: [
-            'Safety Rod harus 100% agar reaktor beroperasi',
             'Naikkan Safety Rod terlebih dahulu',
             'Gunakan Shim untuk reaktivitas kasar',
             'Regulating untuk fine-tuning daya',
@@ -435,7 +434,6 @@ const translations = {
         guideTitle: 'KEYBOARD GUIDE',
         noteTitle: '⚠ OPERATION NOTES',
         notes: [
-            'Safety Rod must be 100% for reactor to operate',
             'Raise Safety Rod first',
             'Use Shim for coarse reactivity',
             'Regulating for fine power tuning',
