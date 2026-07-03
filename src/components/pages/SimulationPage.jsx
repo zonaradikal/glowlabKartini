@@ -507,9 +507,9 @@ function RulesModal({ nickname, phases, onConfirm }) {
             extra: (
                 <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 8, flexWrap: 'wrap' }}>
                     {[
-                        { n: 1, label: 'SAFETY ROD', sub: '→ 100%', color: '#cc2200' },
-                        { n: 2, label: 'SHIM ROD', sub: t('rulesCoarseReactivity'), color: '#1144cc' },
-                        { n: 3, label: 'REGULATING ROD', sub: t('rulesFineTuning'), color: '#22aa44' },
+                        { n: 1, label: 'SAFETY', color: '#cc2200' },
+                        { n: 2, label: 'SHIM', color: '#1144cc' },
+                        { n: 3, label: 'REGULATING', color: '#22aa44' },
                     ].map((step, i) => (
                         <React.Fragment key={step.n}>
                             <div style={{
@@ -520,7 +520,6 @@ function RulesModal({ nickname, phases, onConfirm }) {
                                 <span style={{ fontFamily: "'Orbitron',monospace", fontSize: 9, fontWeight: 900, color: step.color }}>
                                     {step.n}. {step.label}
                                 </span>
-                                <span style={{ fontSize: 10, color: '#25292d' }}>{step.sub}</span>
                             </div>
                             {i < 2 && <span style={{ color: '#aabbcc', fontSize: 14 }}>→</span>}
                         </React.Fragment>
