@@ -384,12 +384,6 @@ function DisconnectedOverlay({ status }) {
                 }}>
                     {isRecon ? t('irlReconnMsg') : t('irlConnMsg')}
                 </p>
-                <p style={{
-                    fontFamily: "'Poppins',sans-serif", fontSize: 8,
-                    color: C.dim, letterSpacing: 0, marginTop: 6, marginBottom: 0,
-                }}>
-                    /api/irl/stream
-                </p>
             </div>
         </div>
     )
