@@ -426,7 +426,7 @@ function NicknameInput({ onSubmit }) {
                 {/* Hint */}
                 <div style={{
                     fontFamily: "'Poppins',sans-serif",
-                    fontSize: 8, color: '#5e7387',
+                    fontSize: 10, color: '#5e7387',
                     letterSpacing: 0, textAlign: 'center',
                 }}>
                     {t('nicknameHint')}
@@ -453,8 +453,8 @@ function RulesModal({ nickname, phases, onConfirm }) {
             color: '#0055aa',
             title: t('rulesSimGoalTitle'),
             body: isId
-                ? `Stabilkan daya reaktor sesuai target pada setiap fase. Ada ${phases?.length || 5} fase berturut-turut, masing-masing berlangsung ${phases?.[0]?.durationSec || 60} detik. Semakin dekat daya kamu ke target, semakin besar poin per detik yang didapat (maksimal 10 poin/detik).`
-                : `Stabilize reactor power to match the target in each phase. There are ${phases?.length || 5} consecutive phases, each lasting ${phases?.[0]?.durationSec || 60} seconds. The closer your power is to the target, the more points you earn per second (up to 10 pts/sec).`,
+                ? `Kontrol daya reaktor sesuai target pada setiap fase. Ada ${phases?.length || 5} fase berturut-turut, masing-masing berlangsung ${phases?.[0]?.durationSec || 60} detik. Semakin dekat daya kamu ke target, semakin besar poin per detik yang didapat (maksimal 10 poin/detik).`
+                : `Control reactor power to match the target in each phase. There are ${phases?.length || 5} consecutive phases, each lasting ${phases?.[0]?.durationSec || 60} seconds. The closer your power is to the target, the more points you earn per second (up to 10 pts/sec).`,
             extra: phases?.length > 0 && (
                 <div style={{ display: 'flex', gap: 6, marginTop: 8, flexWrap: 'wrap' }}>
                     {phases.map((p, i) => (
@@ -466,7 +466,7 @@ function RulesModal({ nickname, phases, onConfirm }) {
                             <span style={{ fontFamily: "'Poppins',sans-serif", fontSize: 8, color: '#7799bb' }}>
                                 {t('rulesFaseLabel')} {i + 1}
                             </span>
-                            <span style={{ fontFamily: "'Orbitron',monospace", fontSize: 12, fontWeight: 900, color: '#0055aa' }}>
+                            <span style={{ fontFamily: "'Poppins',sans-serif", fontSize: 12, fontWeight: 900, color: '#0055aa' }}>
                                 {p.target} kW
                             </span>
                         </div>
@@ -487,14 +487,14 @@ function RulesModal({ nickname, phases, onConfirm }) {
                     ].map((r, i) => (
                         <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                             <kbd style={{
-                                fontFamily: "'Orbitron',monospace", fontSize: 8, fontWeight: 700,
-                                padding: '3px 7px', border: `1px solid ${r.color}88`,
+                                fontFamily: "'Poppins',sans-serif", fontSize: 11, fontWeight: 700,
+                                padding: '4px 9px', border: `1px solid ${r.color}88`,
                                 borderRadius: 4, color: r.color, background: `${r.color}10`,
-                                whiteSpace: 'nowrap', minWidth: 100, textAlign: 'center',
+                                whiteSpace: 'nowrap', minWidth: 110, textAlign: 'center',
                             }}>
                                 {r.keys}
                             </kbd>
-                            <span style={{ fontSize: 11, color: '#25292d' }}>{r.label}</span>
+                            <span style={{ fontFamily: "'Poppins',sans-serif", fontSize: 11, color: '#25292d' }}>{r.label}</span>
                         </div>
                     ))}
                 </div>
@@ -517,7 +517,7 @@ function RulesModal({ nickname, phases, onConfirm }) {
                                 background: `${step.color}10`, border: `1px solid ${step.color}55`,
                                 borderRadius: 6, padding: '6px 10px',
                             }}>
-                                <span style={{ fontFamily: "'Orbitron',monospace", fontSize: 9, fontWeight: 900, color: step.color }}>
+                                <span style={{ fontFamily: "'Poppins',sans-serif", fontSize: 10, fontWeight: 900, color: step.color }}>
                                     {step.n}. {step.label}
                                 </span>
                             </div>
@@ -565,7 +565,7 @@ function RulesModal({ nickname, phases, onConfirm }) {
                     {t('rulesComponentList').map((item, i) => (
                         <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 7 }}>
                             <span style={{
-                                fontFamily: "'Orbitron',monospace", fontSize: 11,
+                                fontFamily: "'Poppins',sans-serif", fontSize: 11,
                                 fontWeight: 900, color: '#7733cc', minWidth: 14, lineHeight: 1,
                             }}>
                                 {item.icon}
@@ -629,7 +629,7 @@ function RulesModal({ nickname, phases, onConfirm }) {
                 }}>
                     <span style={{ fontSize: 35, lineHeight: 1, marginBottom: 4 }}>🎮</span>
                     <div style={{
-                        fontFamily: "'Orbitron',monospace", fontSize: 20, fontWeight: 800,
+                        fontFamily: "'Poppins',sans-serif", fontSize: 20, fontWeight: 800,
                         color: '#0055aa', letterSpacing: 1.5, textAlign: 'center',
                     }}>
                         {t('rulesWelcomeLabel')}{nickname}!
@@ -656,13 +656,13 @@ function RulesModal({ nickname, phases, onConfirm }) {
                             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6 }}>
                                 <span style={{ fontSize: 16 }}>{sec.icon}</span>
                                 <span style={{
-                                    fontFamily: "'Orbitron',monospace", fontSize: 12, fontWeight: 700,
-                                    color: sec.color, letterSpacing: 1,
+                                    fontFamily: "'Poppins',sans-serif", fontSize: 12, fontWeight: 700,
+                                    color: sec.color, letterSpacing: 0,
                                 }}>
                                     {sec.title}
                                 </span>
                             </div>
-                            <p style={{ fontSize: 12, color: '#25292d', lineHeight: 1.6, margin: 0 }}>
+                            <p style={{ fontFamily: "'Poppins',sans-serif", fontSize: 12, color: '#25292d', lineHeight: 1.6, margin: 0 }}>
                                 {sec.body}
                             </p>
                             {sec.extra}
