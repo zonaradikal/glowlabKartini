@@ -172,7 +172,11 @@ export const COMPONENT_DETAILS = {
       detail:
         "Panel Operator dan Monitor merupakan pusat pengawasan digital di ruang kendali Reaktor Kartini. Melalui layar monitor dan panel instrumen, operator dapat memantau parameter operasi reaktor secara real-time seperti daya, suhu, fluks neutron, posisi batang kendali, dan indikator keselamatan serta mencatat log operasi sesuai prosedur keselamatan BAPETEN. Selain fungsi pengawasan, panel ini juga menjadi pusat kendali bagi operator untuk mengontrol naik dan turunnya 3 batang kendali guna mengatur jalannya operasi reaktor.",
       specs: [
-        { label: "Fungsi", value: "Pemantauan & pencatatan data operasi" },
+        {
+          label: "Fungsi",
+          value:
+            "Kontrol Batang Kendali, Pemantauan, dan pencatatan data operasi",
+        },
         { label: "Lokasi", value: "Ruang kendali operator" },
       ],
     },
@@ -180,7 +184,10 @@ export const COMPONENT_DETAILS = {
       detail:
         "The Operator Panel and Monitor is the digital supervision center in the Kartini Reactor control room. Through monitor screens and instrument panels, operators can monitor reactor operating parameters in real-time — including power, temperature, neutron flux, control rod positions, and safety indicators — and log operations in accordance with BAPETEN safety procedures. In addition to its monitoring role, this panel also serves as the control center for operators to manage the raising and lowering of the 3 control rods to regulate reactor operation.",
       specs: [
-        { label: "Function", value: "Real-time monitoring & operation logging" },
+        {
+          label: "Function",
+          value: "Real-time monitoring & operation logging",
+        },
         { label: "Location", value: "Operator control room" },
       ],
     },
@@ -216,74 +223,160 @@ export function getComponentDetail(componentId, language) {
 // ── Live sensor spec definitions per label ──
 const LIVE_SPEC_DEFS = {
   rod_safety: {
-    id: [{ src: 'safety', label: 'Posisi', unit: '%', dec: 1, fromRod: true }],
-    en: [{ src: 'safety', label: 'Position', unit: '%', dec: 1, fromRod: true }],
+    id: [{ src: "safety", label: "Posisi", unit: "%", dec: 1, fromRod: true }],
+    en: [
+      { src: "safety", label: "Position", unit: "%", dec: 1, fromRod: true },
+    ],
   },
   rod_shim: {
-    id: [{ src: 'shim', label: 'Posisi', unit: '%', dec: 1, fromRod: true }],
-    en: [{ src: 'shim', label: 'Position', unit: '%', dec: 1, fromRod: true }],
+    id: [{ src: "shim", label: "Posisi", unit: "%", dec: 1, fromRod: true }],
+    en: [{ src: "shim", label: "Position", unit: "%", dec: 1, fromRod: true }],
   },
   rod_regulating: {
-    id: [{ src: 'regulating', label: 'Posisi', unit: '%', dec: 1, fromRod: true }],
-    en: [{ src: 'regulating', label: 'Position', unit: '%', dec: 1, fromRod: true }],
+    id: [
+      { src: "regulating", label: "Posisi", unit: "%", dec: 1, fromRod: true },
+    ],
+    en: [
+      {
+        src: "regulating",
+        label: "Position",
+        unit: "%",
+        dec: 1,
+        fromRod: true,
+      },
+    ],
   },
   core: {
-    id: [{ src: 'fuel_element_temp', label: 'Suhu Elemen Bahan Bakar', unit: '°C', dec: 2 }],
-    en: [{ src: 'fuel_element_temp', label: 'Fuel Element Temp', unit: '°C', dec: 2 }],
+    id: [
+      {
+        src: "fuel_element_temp",
+        label: "Suhu Elemen Bahan Bakar",
+        unit: "°C",
+        dec: 2,
+      },
+    ],
+    en: [
+      {
+        src: "fuel_element_temp",
+        label: "Fuel Element Temp",
+        unit: "°C",
+        dec: 2,
+      },
+    ],
   },
   water: {
     id: [
-      { src: 'water_tank_temp',        label: 'Suhu Tangki Air',    unit: '°C',     dec: 2 },
-      { src: 'water_tank_level',       label: 'Ketinggian Air',     unit: 'cm',     dec: 2 },
-      { src: 'water_ph',               label: 'pH Air',             unit: '',       dec: 2 },
-      { src: 'inlet_he_temp',          label: 'Suhu Masuk HE',      unit: '°C',     dec: 2 },
-      { src: 'outlet_he_temp',         label: 'Suhu Keluar HE',     unit: '°C',     dec: 2 },
-      { src: 'water_flowrate',         label: 'Laju Aliran',        unit: 'L/min',  dec: 2 },
-      { src: 'water_resistance_input', label: 'Resistansi Masuk',   unit: 'MΩ·cm',  dec: 2 },
-      { src: 'water_resistance_output',label: 'Resistansi Keluar',  unit: 'MΩ·cm',  dec: 2 },
+      { src: "water_tank_temp", label: "Suhu Tangki Air", unit: "°C", dec: 2 },
+      { src: "water_tank_level", label: "Ketinggian Air", unit: "cm", dec: 2 },
+      { src: "water_ph", label: "pH Air", unit: "", dec: 2 },
+      { src: "inlet_he_temp", label: "Suhu Masuk HE", unit: "°C", dec: 2 },
+      { src: "outlet_he_temp", label: "Suhu Keluar HE", unit: "°C", dec: 2 },
+      { src: "water_flowrate", label: "Laju Aliran", unit: "L/min", dec: 2 },
+      {
+        src: "water_resistance_input",
+        label: "Resistansi Masuk",
+        unit: "MΩ·cm",
+        dec: 2,
+      },
+      {
+        src: "water_resistance_output",
+        label: "Resistansi Keluar",
+        unit: "MΩ·cm",
+        dec: 2,
+      },
     ],
     en: [
-      { src: 'water_tank_temp',        label: 'Tank Temperature',   unit: '°C',     dec: 2 },
-      { src: 'water_tank_level',       label: 'Tank Level',         unit: 'cm',     dec: 2 },
-      { src: 'water_ph',               label: 'Water pH',           unit: '',       dec: 2 },
-      { src: 'inlet_he_temp',          label: 'Inlet HE Temp',      unit: '°C',     dec: 2 },
-      { src: 'outlet_he_temp',         label: 'Outlet HE Temp',     unit: '°C',     dec: 2 },
-      { src: 'water_flowrate',         label: 'Flowrate',           unit: 'L/min',  dec: 2 },
-      { src: 'water_resistance_input', label: 'Resistance In',      unit: 'MΩ·cm',  dec: 2 },
-      { src: 'water_resistance_output',label: 'Resistance Out',     unit: 'MΩ·cm',  dec: 2 },
+      { src: "water_tank_temp", label: "Tank Temperature", unit: "°C", dec: 2 },
+      { src: "water_tank_level", label: "Tank Level", unit: "cm", dec: 2 },
+      { src: "water_ph", label: "Water pH", unit: "", dec: 2 },
+      { src: "inlet_he_temp", label: "Inlet HE Temp", unit: "°C", dec: 2 },
+      { src: "outlet_he_temp", label: "Outlet HE Temp", unit: "°C", dec: 2 },
+      { src: "water_flowrate", label: "Flowrate", unit: "L/min", dec: 2 },
+      {
+        src: "water_resistance_input",
+        label: "Resistance In",
+        unit: "MΩ·cm",
+        dec: 2,
+      },
+      {
+        src: "water_resistance_output",
+        label: "Resistance Out",
+        unit: "MΩ·cm",
+        dec: 2,
+      },
     ],
   },
   pc_operator: {
     id: [
-      { src: 'radiation_deck',           label: 'Dek Reaktor',        unit: 'mSv/h', dec: 4 },
-      { src: 'radiation_subcritic',      label: 'Area Subkritik',     unit: 'mSv/h', dec: 4 },
-      { src: 'radiation_demineralizer',  label: 'Area Demineralizer', unit: 'mSv/h', dec: 4 },
-      { src: 'radiation_column_thermal', label: 'Area Kolom Termal',  unit: 'mSv/h', dec: 4 },
-      { src: 'radiation_bulkshielding',  label: 'Area Bulk Shielding',unit: 'mSv/h', dec: 4 },
+      { src: "radiation_deck", label: "Dek Reaktor", unit: "mSv/h", dec: 4 },
+      {
+        src: "radiation_subcritic",
+        label: "Area Subkritik",
+        unit: "mSv/h",
+        dec: 4,
+      },
+      {
+        src: "radiation_demineralizer",
+        label: "Area Demineralizer",
+        unit: "mSv/h",
+        dec: 4,
+      },
+      {
+        src: "radiation_column_thermal",
+        label: "Area Kolom Termal",
+        unit: "mSv/h",
+        dec: 4,
+      },
+      {
+        src: "radiation_bulkshielding",
+        label: "Area Bulk Shielding",
+        unit: "mSv/h",
+        dec: 4,
+      },
     ],
     en: [
-      { src: 'radiation_deck',           label: 'Reactor Deck',         unit: 'mSv/h', dec: 4 },
-      { src: 'radiation_subcritic',      label: 'Subcritic Area',       unit: 'mSv/h', dec: 4 },
-      { src: 'radiation_demineralizer',  label: 'Demineralizer Area',   unit: 'mSv/h', dec: 4 },
-      { src: 'radiation_column_thermal', label: 'Column Thermal Area',  unit: 'mSv/h', dec: 4 },
-      { src: 'radiation_bulkshielding',  label: 'Bulkshielding Area',   unit: 'mSv/h', dec: 4 },
+      { src: "radiation_deck", label: "Reactor Deck", unit: "mSv/h", dec: 4 },
+      {
+        src: "radiation_subcritic",
+        label: "Subcritic Area",
+        unit: "mSv/h",
+        dec: 4,
+      },
+      {
+        src: "radiation_demineralizer",
+        label: "Demineralizer Area",
+        unit: "mSv/h",
+        dec: 4,
+      },
+      {
+        src: "radiation_column_thermal",
+        label: "Column Thermal Area",
+        unit: "mSv/h",
+        dec: 4,
+      },
+      {
+        src: "radiation_bulkshielding",
+        label: "Bulkshielding Area",
+        unit: "mSv/h",
+        dec: 4,
+      },
     ],
   },
-}
+};
 
 // Helper: build live spec rows from IRL sensor data for a given label.
 // Returns [] when liveData/rodPositions are null (SimulationPage — no live feed).
 export function getLiveSpecs(labelId, liveData, rodPositions, language) {
-  const defs = LIVE_SPEC_DEFS[labelId]
-  if (!defs) return []
-  const lang = language === 'en' ? 'en' : 'id'
-  const rows = defs[lang] || defs.id
-  return rows.map(r => {
-    const raw = r.fromRod ? rodPositions?.[r.src] : liveData?.[r.src]
-    const n = typeof raw === 'number' ? raw : parseFloat(raw)
+  const defs = LIVE_SPEC_DEFS[labelId];
+  if (!defs) return [];
+  const lang = language === "en" ? "en" : "id";
+  const rows = defs[lang] || defs.id;
+  return rows.map((r) => {
+    const raw = r.fromRod ? rodPositions?.[r.src] : liveData?.[r.src];
+    const n = typeof raw === "number" ? raw : parseFloat(raw);
     const val = !isNaN(n)
-      ? `${n.toFixed(r.dec)}${r.unit ? ' ' + r.unit : ''}`
-      : '--'
-    return { label: r.label, value: val }
-  })
+      ? `${n.toFixed(r.dec)}${r.unit ? " " + r.unit : ""}`
+      : "--";
+    return { label: r.label, value: val };
+  });
 }
