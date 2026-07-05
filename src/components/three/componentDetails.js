@@ -11,20 +11,22 @@ export const COMPONENT_DETAILS = {
       detail:
         "Teras reaktor adalah jantung dari Reaktor Kartini, berisi 1 susunan elemen bahan bakar U-ZrH (Uranium-Zirkonium Hidrida) yang disusun membentuk pola heksagonal. Di sinilah reaksi fisi berantai terjadi: neutron menumbuk inti Uranium-235, membelahnya menjadi dua inti lebih kecil sambil melepaskan energi panas dan neutron baru.",
       specs: [
-        { label: "Diameter teras", value: "~56 cm" },
-        { label: "Tinggi aktif", value: "~38 cm" },
-        { label: "Bahan bakar", value: "U-ZrH, 8.5% enrichment" },
+        { label: "Diameter teras", value: "~32 cm" },
+        { label: "Tinggi aktif", value: "~35 cm" },
+        { label: "Bahan bakar", value: "U-ZrH" },
         { label: "Daya nominal", value: "100 kW (maks. 120 kW)" },
+        { label: "Trip daya", value: "110% (110 kW)" },
       ],
     },
     en: {
       detail:
         "The reactor core is the heart of the Kartini Reactor, containing U-ZrH (Uranium-Zirconium Hydride) fuel elements arranged in a hexagonal pattern. This is where the chain fission reaction occurs: neutrons strike Uranium-235 nuclei, splitting them into smaller nuclei while releasing thermal energy and new neutrons.",
       specs: [
-        { label: "Core diameter", value: "~56 cm" },
-        { label: "Active height", value: "~38 cm" },
-        { label: "Fuel type", value: "U-ZrH, 8.5% enrichment" },
+        { label: "Core diameter", value: "~32 cm" },
+        { label: "Active height", value: "~35 cm" },
+        { label: "Fuel type", value: "U-ZrH" },
         { label: "Nominal power", value: "100 kW (max. 120 kW)" },
+        { label: "Power trip", value: "110% (110 kW)" },
       ],
     },
   },
