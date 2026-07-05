@@ -499,6 +499,7 @@ function LabelItem({
                                             lineHeight: 1.6,
                                             color: '#334455',
                                             margin: 0,
+                                            textAlign: 'justify',
                                         }}>
                                             {detailContent.detail}
                                         </p>

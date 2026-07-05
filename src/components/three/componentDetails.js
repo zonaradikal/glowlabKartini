@@ -170,7 +170,7 @@ export const COMPONENT_DETAILS = {
   pc_operator: {
     id: {
       detail:
-        "Panel Operator dan Monitor adalah pusat pengawasan digital di ruang kendali Reaktor Kartini. Terdiri dari layar monitor dan panel instrumen yang menampilkan parameter operasi reaktor secara real-time, meliputi daya, suhu, fluks neutron, posisi batang kendali, serta indikator keselamatan. Operator menggunakan panel ini untuk memantau kondisi reaktor dan mencatat log operasi sesuai prosedur keselamatan yang diwajibkan BAPETEN.",
+        "Panel Operator dan Monitor merupakan pusat pengawasan digital di ruang kendali Reaktor Kartini. Melalui layar monitor dan panel instrumen, operator dapat memantau parameter operasi reaktor secara real-time seperti daya, suhu, fluks neutron, posisi batang kendali, dan indikator keselamatan serta mencatat log operasi sesuai prosedur keselamatan BAPETEN. Selain fungsi pengawasan, panel ini juga menjadi pusat kendali bagi operator untuk mengontrol naik dan turunnya 3 batang kendali guna mengatur jalannya operasi reaktor.",
       specs: [
         { label: "Fungsi", value: "Pemantauan & pencatatan data operasi" },
         { label: "Lokasi", value: "Ruang kendali operator" },
@@ -178,7 +178,7 @@ export const COMPONENT_DETAILS = {
     },
     en: {
       detail:
-        "The Operator Panel and Monitor is the digital supervision center in the Kartini Reactor control room. It consists of monitor screens and instrument panels that display reactor operating parameters in real-time, including power, temperature, neutron flux, control rod positions, and safety indicators. Operators use this panel to monitor reactor conditions and log operations in accordance with BAPETEN safety procedures.",
+        "The Operator Panel and Monitor is the digital supervision center in the Kartini Reactor control room. Through monitor screens and instrument panels, operators can monitor reactor operating parameters in real-time — including power, temperature, neutron flux, control rod positions, and safety indicators — and log operations in accordance with BAPETEN safety procedures. In addition to its monitoring role, this panel also serves as the control center for operators to manage the raising and lowering of the 3 control rods to regulate reactor operation.",
       specs: [
         { label: "Function", value: "Real-time monitoring & operation logging" },
         { label: "Location", value: "Operator control room" },
