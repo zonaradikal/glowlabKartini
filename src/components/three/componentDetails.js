@@ -170,17 +170,17 @@ export const COMPONENT_DETAILS = {
   pc_operator: {
     id: {
       detail:
-        "PC Operator adalah terminal komputer yang digunakan operator untuk memantau parameter reaktor secara digital, termasuk daya, suhu, fluks neutron, dan posisi batang kendali serta mencatat log operasi sesuai prosedur keselamatan yang diwajibkan regulator.",
+        "Panel Operator dan Monitor adalah pusat pengawasan digital di ruang kendali Reaktor Kartini. Terdiri dari layar monitor dan panel instrumen yang menampilkan parameter operasi reaktor secara real-time, meliputi daya, suhu, fluks neutron, posisi batang kendali, serta indikator keselamatan. Operator menggunakan panel ini untuk memantau kondisi reaktor dan mencatat log operasi sesuai prosedur keselamatan yang diwajibkan BAPETEN.",
       specs: [
-        { label: "Fungsi", value: "Monitoring & pencatatan data operasi" },
+        { label: "Fungsi", value: "Pemantauan & pencatatan data operasi" },
         { label: "Lokasi", value: "Ruang kendali operator" },
       ],
     },
     en: {
       detail:
-        "The Operator PC is the computer terminal used by operators to digitally monitor reactor parameters,  including power, temperature, neutron flux, and control rod positions and to log operations in accordance with regulator-mandated safety procedures.",
+        "The Operator Panel and Monitor is the digital supervision center in the Kartini Reactor control room. It consists of monitor screens and instrument panels that display reactor operating parameters in real-time, including power, temperature, neutron flux, control rod positions, and safety indicators. Operators use this panel to monitor reactor conditions and log operations in accordance with BAPETEN safety procedures.",
       specs: [
-        { label: "Function", value: "Operation monitoring & data logging" },
+        { label: "Function", value: "Real-time monitoring & operation logging" },
         { label: "Location", value: "Operator control room" },
       ],
     },

@@ -118,8 +118,8 @@ const LABEL_DATA = [
     // PC OPERATOR — label baru
     {
         id: 'pc_operator',
-        labelEN: 'Operator PC',
-        labelID: '(PC Operator)',
+        labelEN: 'Operator Panel & Monitor',
+        labelID: '(Panel Operator & Monitor)',
         anchor3D: new THREE.Vector3(DESK_X, DECK_Y_VAL + 1.2, DESK_Z),
         color: '#00ccff',
         icon: 'G',

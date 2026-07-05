@@ -245,7 +245,7 @@ const translations = {
             { icon: 'D', name: 'Teras Reaktor' },
             { icon: 'E', name: 'Air Kolam' },
             { icon: 'F', name: 'Kolam Reaktor' },
-            { icon: 'G', name: 'PC Operator' },
+            { icon: 'G', name: 'Panel Operator & Monitor' },
             { icon: 'H', name: 'Panel Kontrol' },
         ],
         // ── Control Panel Modal ──
@@ -539,7 +539,7 @@ const translations = {
             { icon: 'D', name: 'Reactor Core' },
             { icon: 'E', name: 'Pool Water' },
             { icon: 'F', name: 'Reactor Pool' },
-            { icon: 'G', name: 'Operator PC' },
+            { icon: 'G', name: 'Operator Panel & Monitor' },
             { icon: 'H', name: 'Control Panel' },
         ],
         // ── Control Panel Modal ──
