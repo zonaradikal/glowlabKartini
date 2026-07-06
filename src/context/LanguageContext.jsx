@@ -159,6 +159,7 @@ const translations = {
             'Gunakan Shim untuk reaktivitas kasar',
             'Regulating untuk fine-tuning daya',
             'SCRAM menurunkan semua batang ke 0%',
+            'Jika terjadi SCRAM, tekan R / T / Y untuk mereset masing-masing batang kendali',
         ],
         guideRows: [
             { key: 'SHIFT', desc: 'Interlock – wajib ditekan' },
@@ -168,6 +169,9 @@ const translations = {
             { key: 'Shift + S', desc: 'Shim Rod ▼ Turun' },
             { key: 'Shift + E', desc: 'Regulating ▲ Naik' },
             { key: 'Shift + D', desc: 'Regulating ▼ Turun' },
+            { key: 'R', desc: 'SCRAM Safety Rod / Tekan lagi untuk Reset' },
+            { key: 'T', desc: 'SCRAM Shim Rod / Tekan lagi untuk Reset' },
+            { key: 'Y', desc: 'SCRAM Regulating / Tekan lagi untuk Reset' },
         ],
         //── SkorPage ──
         skorTitle: 'SESI SIMULASI SELESAI',
@@ -451,6 +455,7 @@ const translations = {
             'Use Shim for coarse reactivity',
             'Regulating for fine power tuning',
             'SCRAM drops all rods to 0%',
+            'If SCRAM occurs, press R / T / Y to reset each control rod',
         ],
         guideRows: [
             { key: 'SHIFT', desc: 'Interlock – must be held' },
@@ -460,6 +465,9 @@ const translations = {
             { key: 'Shift + S', desc: 'Shim Rod ▼ Down' },
             { key: 'Shift + E', desc: 'Regulating ▲ Up' },
             { key: 'Shift + D', desc: 'Regulating ▼ Down' },
+            { key: 'R', desc: 'SCRAM Safety Rod / Press again to Reset' },
+            { key: 'T', desc: 'SCRAM Shim Rod / Press again to Reset' },
+            { key: 'Y', desc: 'SCRAM Regulating / Press again to Reset' },
         ],
         //── SkorPage ──
         skorTitle: 'SIMULATION SESSION ENDED',

@@ -1059,6 +1059,7 @@ function LeftPanel({ rodPositions, reactorData, isScrammed, isReactorActive }) {
         'Shift + Q': '#cc2200', 'Shift + A': '#cc2200',
         'Shift + W': '#886600', 'Shift + S': '#886600',
         'Shift + E': '#006633', 'Shift + D': '#006633',
+        'R': '#cc2200', 'T': '#886600', 'Y': '#006633',
     }
 
     const W = 276
